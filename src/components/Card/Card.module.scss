@@ -1,0 +1,39 @@
+.card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color:darkblue;
+    color: #fff;
+}
+
+.card__title {
+    margin-bottom: 20px;
+}
+
+.card__list {
+    list-style-type: none;
+}
+
+.card__list__item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: darkblue;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        color: darkblue;
+        background-color: #fff;
+    }
+}
