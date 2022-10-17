@@ -4,18 +4,18 @@ import styles from './Card.module.scss';
 
 const Card = ({data, setAnswer}) => {
 
-    const itemHandler = (isCorrect) => {
-        setAnswer(isCorrect);
+    const itemHandler = (isCorrect, name) => {
+        setAnswer(isCorrect, name);
     }
+
     return (
         <div className={styles.card}>
             <h2 className={styles.card__title}>{data.question}</h2>
             <ul className={styles.card__list}>
                 {
                     data.answers.map(item => {
-                        if (item.isCorrect);
                         return (
-                            <li className={styles.card__list__item} onClick={() => {itemHandler(item.isCorrect)}} key={uuid()}>{item.name}</li>
+                            <li className={styles.card__list__item} onClick={() => {itemHandler(item.isCorrect,item.name)}} key={uuid()}>{item.name}</li>
                         )
                     })
                 }
